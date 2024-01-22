@@ -42,7 +42,24 @@ namespace CORE_FIRST_PROJ.Controllers
                     Id = 2, Name = "two"
                 }
             };
-            return View();
+            return View(new List<City>()
+            {
+            new City
+            {
+            Id = "1",
+            Name = "berlin",
+            },
+            new City
+            {
+             Id = "2",
+            Name = "nevada",
+            },
+            new City      
+            {
+            Id = "3",
+            Name = "nebraska",
+            }
+            });
         }
 
 
