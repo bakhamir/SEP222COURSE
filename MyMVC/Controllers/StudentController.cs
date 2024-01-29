@@ -23,6 +23,12 @@ namespace MyMVC.Controllers
         {
             return Ok(service.GetStudentById(id));
         }
+        
+        [HttpGet, Route("StudentAdd/{id}/{firstname}/{lastname}/{birthdate}")]
+        public ActionResult StudentAdd(int id, string firstname,string lastname,DateTime birthdate)
+        {
+            return Ok(service.StudentAdd(new Models.Student { firstName = firstname ,lastName = lastname,birthDate = birthdate}));
+        }
 
     }
 
