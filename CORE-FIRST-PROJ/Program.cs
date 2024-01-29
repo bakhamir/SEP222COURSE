@@ -24,7 +24,7 @@ namespace CORE_FIRST_PROJ
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Our}/{action=Index}/{id?}");
+                pattern: "{controller=Home}/{action=Index}/{id?}");
 
  
 

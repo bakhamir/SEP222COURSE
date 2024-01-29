@@ -5,4 +5,30 @@
 <div class="text-center">
     <h1 class="display-4">Добро пожаловать, снова</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    @model List<City>
+
+
+    @{
+        ViewData["Title"] = "OurFirsrt";
+    }
+
+    <h1>OurFirst</h1>
+    <p>
+        @{
+ <table>
+        <tr>
+            <th>City Id</th>
+            <th>City Name</th>
+        </tr>
+        @foreach (var city in Model)
+        {
+            <tr>
+                <td>@city.Id</td>
+                <td>@city.Name</td>
+            </tr>
+        }
+    </table>
+        }
+    </p>
+
 </div>
